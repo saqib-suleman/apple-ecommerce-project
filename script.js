@@ -1,6 +1,6 @@
 //Cube
 let x = 0;
-let y = 0;
+let y = 20;
 let z = 0;
 let bool = true;
 let interval;
@@ -32,7 +32,10 @@ document.querySelector(".bottom-z-control").addEventListener("click", () => {
 });
 
 document.querySelector(".reset").addEventListener("click", () => {
-  cube.style.transform = `rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+  x = 0;
+  y = 0;
+  z = 0;
+  cube.style.transform = `rotateX(${x}) rotateY(${y}) rotateZ(${z})`;
 });
 
 const playPause = () => {
