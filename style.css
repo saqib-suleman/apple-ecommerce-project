@@ -585,8 +585,17 @@ html {
   overflow: hidden;
 }
 
+.hide-control {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .watches > div {
   position: absolute;
+}
+
+.watch-bands {
+  transition: margin-right 1s;
 }
 
 .watch-band-img {
@@ -597,6 +606,7 @@ html {
 
 .watch-cases {
   flex-direction: column;
+  transition: margin-top 1s;
 }
 
 .watch-case-img {
