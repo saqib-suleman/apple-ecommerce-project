@@ -1,3 +1,10 @@
+// document
+//   .querySelector("meta[name=viewport]")
+//   .setAttribute(
+//     "content",
+//     "width=device-width, initial-scale=" + 1 / window.devicePixelRatio
+//   );
+
 const slideshowDivs = (() => {
   for (let i = 1; i <= 5; i++) {
     const div = document.createElement("div");
