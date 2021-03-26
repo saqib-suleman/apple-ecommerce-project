@@ -42,26 +42,28 @@ document.querySelector(".reset").addEventListener("click", () => {
   y = 0;
   z = 0;
   cube.style.transform = `rotateX(${x}) rotateY(${y}) rotateZ(${z})`;
+  cube.style.transition = `transform 0.2s`;
 });
 
-const playPause = () => {
+const rotateCube = () => {
   if (bool) {
     interval = setInterval(() => {
       cube.style.transform = `rotateX(${x}deg) rotateY(${y++}deg) rotateZ(${z}deg)`;
+      cube.style.transition = `transform 0.5s`;
     }, 100);
   } else {
     clearInterval(interval);
   }
 };
-playPause();
+rotateCube();
 
 document.querySelector(".controls").addEventListener("mouseover", () => {
   bool = false;
-  playPause();
+  rotateCube();
 });
 document.querySelector(".controls").addEventListener("mouseout", () => {
   bool = true;
-  playPause();
+  rotateCube();
 });
 //End of Cube
 
